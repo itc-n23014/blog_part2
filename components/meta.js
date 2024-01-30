@@ -1,10 +1,23 @@
 import Head from 'next/head'
 
+import { siteMeta } from 'lib/constants'
+const {
+  siteTitle,
+  siteDesc,
+  siteUrl,
+  siteLocale,
+  siteType,
+  siteIcon
+} = siteMeta
+
 const Meta = props => {
+  const title = props.pageTitle
+    ? `${props.pageTitle} | ${siteTitle}`
+    : siteTitle
   return (
     <Head>
-      <title>{props.pageTitle}</title>
-      <meta property='og:title' content={props.pageTitle} />
+      <title>{title}</title>
+      <meta property='og:title' content={title} />
     </Head>
   )
 }
