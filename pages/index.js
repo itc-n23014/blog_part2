@@ -1,6 +1,11 @@
-import Hero from '../components/hero'
+import Hero from 'components/hero'
+import Container from 'components/container'
 
 const Home = () => {
-  return <Hero title='CUBE' subtitle='アウトプットしていくサイト' imageOn />
+  return (
+    <Container>
+      <Hero title='CUBE' subtitle='アウトプットしていくサイト' imageOn />
+    </Container>
+  )
 }
 export default Home
