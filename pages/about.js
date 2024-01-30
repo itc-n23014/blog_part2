@@ -9,10 +9,14 @@ import {
 } from 'components/two-column'
 import Image from 'next/image'
 import eyecatch from 'images/about.jpg'
+import Head from 'next/head'
 
 const About = () => {
   return (
     <Container>
+      <Head>
+        <title>アバウト</title>
+      </Head>
       <Hero title='About' subtitle='About development activities' />
       <figure>
         <Image
