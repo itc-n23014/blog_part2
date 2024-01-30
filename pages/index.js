@@ -1,11 +1,6 @@
 import Hero from '../components/hero'
-import Layout from 'components/layout'
 
 const Home = () => {
-  return (
-    <Layout>
-      <Hero />
-    </Layout>
-  )
+  return <Hero />
 }
 export default Home
