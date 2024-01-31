@@ -9,5 +9,6 @@ const Home = () => {
       <Hero title='CUBE' subtitle='アウトプットしていくサイト' imageOn />
     </Container>
   )
+
 }
 export default Home
