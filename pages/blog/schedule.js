@@ -4,7 +4,7 @@ import Container from 'components/container'
 const Schedule = props => {
   return (
     <Container>
-      <h1>記事のタイトル</h1>
+      <h1>{props.title}</h1>
     </Container>
   )
 }
