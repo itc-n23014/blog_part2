@@ -15,7 +15,7 @@ import { extractText } from 'lib/extract-text'
 import { eyecatchLocal } from 'lib/constants'
 import { getPlaiceholder } from 'plaiceholder'
 
-const Schedule = props => {
+const Post = props => {
   return (
     <Container>
       <Meta
@@ -58,10 +58,17 @@ const Schedule = props => {
     </Container>
   )
 }
-export default Schedule
+export default Post
 
-export const getStaticProps = async () => {
-  const slug = 'micro'
+export const getStaticPaths = async () => {
+  return {
+    paths: ['/blog/schedule', '/blog/music', '/blog/micro'],
+    fallback: false
+  }
+}
+
+export const getStaticProps = async context => {
+  const slug = context.params.slug
   const post = await getPostBySlug(slug)
 
   const description = extractText(post.content)
