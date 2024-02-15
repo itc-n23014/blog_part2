@@ -43,7 +43,7 @@
   animation: openAnim 0.5s forwards;
 }
 .close .text {
-  animation: closeAnim -.5s forwards;
+  animation: closeAnim 0.5s forwards;
 }
 
 @keyframes openAnim {
